@@ -1,0 +1,311 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome5",
+    "definitions": {
+        "Welcome5": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "feed": {
+                    "$ref": "#/definitions/Feed"
+                },
+                "entries": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Entry"
+                    }
+                },
+                "ts": {
+                    "type": "number"
+                },
+                "device_region": {
+                    "type": "string"
+                },
+                "device_type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "device_region",
+                "device_type",
+                "entries",
+                "feed",
+                "ts"
+            ],
+            "title": "Welcome5"
+        },
+        "Entry": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "title_detail": {
+                    "$ref": "#/definitions/Detail"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Link"
+                    }
+                },
+                "link": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".-president-whats-the-difference",
+                        ".6451553",
+                        ".ece",
+                        ".htm",
+                        ".html"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "guidislink": {
+                    "type": "boolean"
+                },
+                "published": {
+                    "type": "string"
+                },
+                "published_parsed": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "summary_detail": {
+                    "$ref": "#/definitions/Detail"
+                },
+                "source": {
+                    "$ref": "#/definitions/Source"
+                },
+                "sub_articles": {
+                    "type": "array",
+                    "items": {}
+                }
+            },
+            "required": [
+                "guidislink",
+                "id",
+                "link",
+                "links",
+                "published",
+                "published_parsed",
+                "source",
+                "sub_articles",
+                "summary",
+                "summary_detail",
+                "title",
+                "title_detail"
+            ],
+            "title": "Entry"
+        },
+        "Link": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "rel": {
+                    "$ref": "#/definitions/Rel"
+                },
+                "type": {
+                    "$ref": "#/definitions/Type"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".-president-whats-the-difference",
+                        ".6451553",
+                        ".ece",
+                        ".htm",
+                        ".html"
+                    ]
+                }
+            },
+            "required": [
+                "href",
+                "rel",
+                "type"
+            ],
+            "title": "Link"
+        },
+        "Source": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "title": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "href",
+                "title"
+            ],
+            "title": "Source"
+        },
+        "Detail": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/Type"
+                },
+                "language": {
+                    "type": "null"
+                },
+                "base": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "base",
+                "language",
+                "type",
+                "value"
+            ],
+            "title": "Detail"
+        },
+        "Feed": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "generator_detail": {
+                    "$ref": "#/definitions/GeneratorDetail"
+                },
+                "generator": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "title_detail": {
+                    "$ref": "#/definitions/Detail"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Link"
+                    }
+                },
+                "link": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "language": {
+                    "type": "string"
+                },
+                "publisher": {
+                    "type": "string"
+                },
+                "publisher_detail": {
+                    "$ref": "#/definitions/PublisherDetail"
+                },
+                "rights": {
+                    "type": "string"
+                },
+                "rights_detail": {
+                    "$ref": "#/definitions/Detail"
+                },
+                "updated": {
+                    "type": "string"
+                },
+                "updated_parsed": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "subtitle": {
+                    "type": "string"
+                },
+                "subtitle_detail": {
+                    "$ref": "#/definitions/Detail"
+                }
+            },
+            "required": [
+                "generator",
+                "generator_detail",
+                "language",
+                "link",
+                "links",
+                "publisher",
+                "publisher_detail",
+                "rights",
+                "rights_detail",
+                "subtitle",
+                "subtitle_detail",
+                "title",
+                "title_detail",
+                "updated",
+                "updated_parsed"
+            ],
+            "title": "Feed"
+        },
+        "GeneratorDetail": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "GeneratorDetail"
+        },
+        "PublisherDetail": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "email": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email"
+            ],
+            "title": "PublisherDetail"
+        },
+        "Rel": {
+            "type": "string",
+            "enum": [
+                "alternate"
+            ],
+            "title": "Rel"
+        },
+        "Type": {
+            "type": "string",
+            "enum": [
+                "text/html",
+                "text/plain"
+            ],
+            "title": "Type"
+        }
+    }
+}

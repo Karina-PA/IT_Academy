@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {}
+      },
+      "image_results": {
+        "type": "array",
+        "items": {}
+      },
+      "total": {
+        "type": "null"
+      },
+      "answers": {
+        "type": "array",
+        "items": {}
+      },
+      "html": {
+        "type": "string"
+      },
+      "ts": {
+        "type": "number"
+      },
+      "device_region": {
+        "type": "string"
+      },
+      "device_type": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "results",
+      "image_results",
+      "total",
+      "answers",
+      "html",
+      "ts",
+      "device_region",
+      "device_type"
+    ]
+  }
